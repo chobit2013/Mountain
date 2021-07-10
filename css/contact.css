@@ -1,0 +1,143 @@
+/* header層 */
+header.header {
+	width: 768px;
+    margin: 0 auto;
+    font-size: 0;
+}
+header.header a.logo_img{
+    display: inline;
+	vertical-align: middle;
+	
+}
+nav.nav {
+	display: inline;
+	vertical-align:20px;
+}
+header.header ul.nav_list {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+}
+header.header ul.nav_list > li {
+	list-style: none;
+	display: inline-block;
+}
+header.header ul.nav_list > li > a {
+	text-decoration: none;
+	display: inline-block;
+	padding: 0px 10px;
+	color: black;
+	font-size: 1rem;
+}
+ul.nav_list > li > a:hover {
+	background-color: rgb(22, 22, 206);
+	color: white;
+}
+div.social_black {
+	padding: 5px 10px;
+	position: relative;
+	font-size: 1rem;
+}
+div.social_black:hover ul.social_link_list {
+	display: block;
+}
+ul.social_link_list {
+	margin: 0;
+	padding: 0;
+	display: none;
+	background-color: white;
+	position: absolute;
+	right: 0;
+	top: 25px;
+}
+ul.social_link_list > li {
+	list-style: none;
+	width: 100px;
+}
+ul.social_link_list > li > a {
+	color: black;
+	display: inline-block;
+	text-decoration: none;
+	width: 100%;
+	text-align: center;
+	padding: 5px 0;
+}
+div.banner{
+	background-image:url("../image/banner.jpg");
+	min-width:768;
+	height: 268px;
+	background-size: cover;
+	
+}
+
+/* contact_page */
+div.contact_container{
+	margin: 0 auto;
+	width:768px;
+	height:590px;
+	/* border: 1px black solid; */
+
+}
+h1.title3{
+    text-align: center;
+	font-size: 18px;
+}
+
+div.input_e-amil_block{
+	text-align: center;
+	padding: 0 50px 0px 0px;
+}
+div.input_e-amil_block>label{
+	padding-right: 20px;
+}
+div.input_e-amil_block>input{
+    border: 1px grey solid;
+    width:calc(100%-120px);
+    border-radius:5px;
+}
+div.input_time_block>label,div.radio{
+    display: inline;
+}
+div.radio{
+    padding:5px ;
+}
+div.input_time_block>label{
+    padding-left:190px;
+}
+textarea.note{
+    width: 300px;;
+    border: 1px gray solid ;
+    border-radius: 5px;
+    height: 300px;
+    resize: none;
+}
+div.input_textarea_block>label{
+    vertical-align: top;
+    padding:0px 18px 0px 255px;
+}
+div.input_textarea_block textarea.note{
+    display: inline-block;
+}
+button.btn_submit{
+    text-align: center;
+    color: white;
+    background-color: black;
+    width: 80px;
+    height: 20px;
+    margin-left:313px;
+    border-radius: 5px;
+    border: 0px;
+}
+
+
+/* footer層 */
+footer.footer{
+	width:auto;
+	background-color: black;
+	color: white;
+	font-size: 14px;
+	line-height:30px;
+    text-align: center; 
+}
+
+
