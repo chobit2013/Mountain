@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Mt.Introduction-1</title>
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/Mt.Introduction-1.css">
+	<link href="https://fonts.googleapis.com/css?family=Gupter|Noto+Sans+TC|Noto+Serif+TC&display=swap"
+		rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	
+	<!-- <link href="./css/dreamslider.min.css" rel="stylesheet" type="text/css" media="screen" /> -->
+	<link href="./css/banner.css" rel="stylesheet" type="text/css">
+	
+	<link href="./css/work.css" rel="stylesheet" type="text/css">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+	
+	<script href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="./js/table.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.0.3/pixi.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="./js/spring.js"></script>
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+	<!-- nav -->
+	<div class="nav" id="mynav">
+		<div class="logo">
+			<a href="Index.html">
+				<img src="./image/logo.png" alt="logo" />
+			</a>
+		</div>
+		<ul class="menu-list">
+			<li><a href="Trip.html">Trip</a></li>
+			<li><a href="Mt.Introduction.html">Mt.Introduction</a></li>
+			<li><a href="Knowledge.html">Knowledge</a></li>
+			<li><a href="Information.html">Information</a></li>
+			<li><a href="Team.html">Team</a></li>
+		</ul>
+		<div class="menu">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+		</div>
+	</div>
+	<script>
+		const navSlide = () => {
+			const menu = document.querySelector('.menu');
+			const nav = document.querySelector('.menu-list');
+			const menuList = document.querySelectorAll('.menu-list li');
+
+			menu.addEventListener('click', () => {
+				nav.classList.toggle('nav-active');
+
+				menuList.forEach((link, index) => {
+					if (link.style.animation) {
+						link.style.animation = '';
+					}
+					else {
+						link.style.animation = `navReveal 0.5s ease forwards ${index / 7 + 0.5}s`;
+					}
+				});
+				menu.classList.toggle('toggle');
+			});
+		}
+
+		navSlide();
+		$(function () {
+			var header = $("#mynav");
+			$(window).scroll(function () {
+				var scroll = $(window).scrollTop();
+
+				if (scroll >= 200) {
+					header.removeClass('nav').addClass('nav2');
+				}
+				else {
+					header.removeClass('nav2').addClass('nav');
+				}
+			});
+		});
+	</script>
+	<!-- nav end-->
+
+	<!-- Carousel -->
+	<div class="slide story" id="slide-1">
+		<div id="content">
+			<div id="slider">
+				<img src="./image/image1.jpg" alt="Peace" data-url="#1">
+				<img src="./image/image2.jpg" alt="Love" data-url="#1">
+				<img src="./image/image3.jpg" alt="for" data-url="#1">
+				<img src="./image/image4.jpg" alt="World" data-url="#1">
+			</div>
+		</div>
+	</div>
+
+	<!-- js for banner -->
+	<script src='./js/classie.js'></script>
+	<script src='./js/TweenMax.min.js'></script>
+	<script src="./js/banner.js"></script>
+	<!-- /js for banner end-->
+	<!-- Carousel end-->
+
+	<!-- slide -->
+	<div class="slide story" id="slide-2">
+		<section class="our-work slideanim">
+			<h3>Close To Nature</h3>
+			<div class="container-fluid">
+				<div class="demo-wrapper">
+					<ul class="portfolio-items">
+						<li class="item">
+							<figure>
+								<div class="view"> <img src="./image/work1.jpg" /> </div>
+								<figcaption>
+									<p><span>By Leo</span></p>
+								</figcaption>
+							</figure>
+							<div class="date">2021.10.14</div>
+						</li>
+						<li class="item">
+							<figure>
+								<div class="view"> <img src="./image/work2.jpg" /> </div>
+								<figcaption>
+									<p><span>By Lisa</span></p>
+								</figcaption>
+							</figure>
+							<div class="date">2021.05.13</div>
+						</li>
+						<li class="item">
+							<figure>
+								<div class="view"> <img src="./image/work3.jpg" /> </div>
+								<figcaption>
+									<p><span>By Marvin</span></p>
+								</figcaption>
+							</figure>
+							<div class="date">2021.01.15</div>
+						</li>
+						<li class="item">
+							<figure>
+								<div class="view"> <img src="./image/work4.jpg" /> </div>
+								<figcaption>
+									<p><span>By Kent</span></p>
+								</figcaption>
+							</figure>
+							<div class="date">2021.12.21</div>
+						</li>
+						<li class="item">
+							<figure>
+								<div class="view"> <img src="./image/work5.jpg" /> </div>
+								<figcaption>
+									<p><span>By Jill</span></p>
+								</figcaption>
+							</figure>
+							<div class="date">2021.11.24</div>
+						</li>
+						<li class="item">
+							<figure>
+								<div class="view"> <img src="./image/work6.jpg" /> </div>
+								<figcaption>
+									<p><span>By Faith</span></p>
+								</figcaption>
+							</figure>
+							<div class="date">2021.10.19</div>
+						</li>
+						<li class="item">
+							<figure>
+								<div class="view"> <img src="./image/work7.jpg" /> </div>
+								<figcaption>
+									<p><span>By Christine</span></p>
+								</figcaption>
+							</figure>
+							<div class="date">2021.10.02</div>
+						</li>
+						<li class="item">
+							<figure>
+								<div class="view"> <img src="./image/work8.jpg" /> </div>
+								<figcaption>
+									<p><span>By Gilbert</span></p>
+								</figcaption>
+							</figure>
+							<div class="date">2021.09.14</div>
+						</li>
+						<li class="item">
+							<figure>
+								<div class="view"> <img src="./image/work9.jpg" /> </div>
+								<figcaption>
+									<p><span>By Leo</span></p>
+								</figcaption>
+							</figure>
+							<div class="date">2021.07.14</div>
+						</li>
+						<li class="item">
+							<figure>
+								<div class="view"> <img src="./image/work10.jpg" /> </div>
+								<figcaption>
+									<p><span>By Ada</span></p>
+								</figcaption>
+							</figure>
+							<div class="date">2021.06.12</div>
+						</li>
+						<li class="item">
+							<figure>
+								<div class="view"> <img src="./image/work11.jpg" /> </div>
+								<figcaption>
+									<p><span>By Alvin</span></p>
+								</figcaption>
+							</figure>
+							<div class="date">2021.05.18</div>
+						</li>
+						<li class="item">
+							<figure>
+								<div class="view"> <img src="./image/work12.jpg" /> </div>
+								<figcaption>
+									<p><span>By Angela</span></p>
+								</figcaption>
+							</figure>
+							<div class="date">2021.04.16</div>
+						</li>
+						<li class="item">
+							<figure>
+								<div class="view"> <img src="./image/work13.jpg" /> </div>
+								<figcaption>
+									<p><span>By Chris</span></p>
+								</figcaption>
+							</figure>
+							<div class="date">2021.03.30</div>
+						</li>
+						<li class="item">
+							<figure>
+								<div class="view"> <img src="./image/work14.jpg" /> </div>
+								<figcaption>
+									<p><span>By Jane</span></p>
+								</figcaption>
+							</figure>
+							<div class="date">2021.2.10</div>
+						</li>
+						<li class="item">
+							<figure>
+								<div class="view"> <img src="./image/work15.jpg" /> </div>
+								<figcaption>
+									<p><span>By Alex</span></p>
+								</figcaption>
+							</figure>
+							<div class="date">2021.01.24</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+	</div>
+	</section>
+
+	<!-- js for works section -->
+	<script src="./js/modernizr-1.5.min.js"></script>
+	<script src="./js/jquery.mousewheel.js"></script>
+	<script src="./js/work.js"></script>
+	<!-- /js for works section -->
+
+	<!-- js for smooth navigation -->
+	<script>
+		$(document).ready(function () {
+			// Add smooth scrolling to all links in navbar + footer link
+			$(".navbar a, section.footer a").on('click', function (event) {
+
+				// Store hash
+				var hash = this.hash;
+
+				// Using jQuery's animate() method to add smooth page scroll
+				// The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 900, function () {
+					// Add hash (#) to URL when done scrolling (default click behavior)
+					window.location.hash = hash;
+				});
+			});
+		})
+	</script>
+	<script>
+		$(window).scroll(function () {
+			$(".slideanim").each(function () {
+				var pos = $(this).offset().top;
+
+				var winTop = $(window).scrollTop();
+				if (pos < winTop + 600) {
+					$(this).addClass("slide");
+				}
+			});
+		});
+	</script>
+	<!-- /js for smooth navigation -->
+	<!-- slide end-->
+
+
+	<!-- head major -->
+	<header class="major_blcok">
+		<header class="major">
+			<p>Xueshan Main Peak - this native of Atayal hunting area, ethnic group called "Babo Hagai"</p>
+		</header>
+	</header>
+	<!-- head major end-->
+
+
+	<!-- map -->
+	<div class="map">
+		<div class="map_block">
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5612.286262720704!2d121.22968476718766!3d24.383654586641075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb53001c9cea3c16f!2sXueshan%20Main%20Peak!5e1!3m2!1sen!2stw!4v1578054235053!5m2!1sen!2stw"
+				width="550" height="450" frameborder="0" style="border:1px rgb(180, 180, 180); border-radius: 6px;"
+				allowfullscreen=""></iframe>
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!4v1578054072879!6m8!1m7!1sCAoSLEFGMVFpcE1WM29xNTd0eW5lcWZCUmw1WGJVYlYyazlTTFRkdUJtN0xweUpk!2m2!1d24.3833877!2d121.2319157!3f282.289227257537!4f15.369997498494527!5f0.7820865974627469"
+				width="550" height="450" frameborder="0" style="border:1px rgb(180, 180, 180); border-radius: 6px;"
+				allowfullscreen=""></iframe>
+		</div>
+	</div>
+	<!-- map end-->
+
+	<!-- table -->
+	<div class="wrapper">
+		<div class="print-tab" data-tab-id="1">
+			<ul class="print-tab-menu">
+				<li data-tab-menu="tab1"><a>Introduction</a></li>
+				<li data-tab-menu="tab2"><a>Name</a></li>
+				<li data-tab-menu="tab3"><a>History</a></li>
+				<li data-tab-menu="tab4"><a>Climbing Xueshan</a></li>
+				<li data-tab-menu="tab5"><a>Basic Information</a></li>
+			</ul>
+			<div class="print-tab-content">
+				<div data-tab-content="tab1">
+					<h3>Xueshan</h3>
+					<p>This is about the shorter mountain currently known as Xueshan. For the taller mountain on
+						Taiwan formerly known as Xueshan, see Yushan (mountain).</p>
+					<br>
+					<p>Xueshan, formerly known as Mount Sylvia and by other names, is a mountain in the Heping
+						District of Taichung, Taiwan. It is the 2nd-highest mountain in Taiwan and in East Asia, at
+						3,886 m (12,749 ft) above sea level. It is located in the Shei-Pa National Park and is
+						visible in good weather from hills near Taiwan's capital Taipei.</p>
+				</div>
+				<div data-tab-content="tab2">
+					<p>Xuěshān is the pinyin romanization of the Chinese name 雪山, meaning "Snow" or "Snowy
+						Mountain". The same name was previously romanized Hsuehshan using the Wade-Giles system.</p>
+					<br>
+					<p>During the Qing Dynasty, the mountain was known to Westerners as Mount Sylvia. It was also
+						known as Shan-chas-shan (properly, Sānchàshān) from a Chinese name meaning "3-Forked" or
+						"3-Prong Mountain". During Japan's occupation of Taiwan, improved surveys showed that
+						Xueshan was shorter than Yushan on Taiwan but taller than Mount Fuji in the Japanese
+						Islands. Its name was accordingly changed to Tsugitakayama, meaning "Next-" or
+						"Second-Highest Mountain", in 1923.</p>
+				</div>
+				<div data-tab-content="tab3">
+					<p>The Japanese governor-general designated Xueshan part of the Tsugitaka-Taroko National Park
+						by the Governor-General of Taiwan on 12 December 1937.</p>
+				</div>
+				<div data-tab-content="tab4">
+					<p>Xueshan is a part of the Shei-Pa National Park and so climbers are required to apply for a
+						park entry permit. This can be done 7–30 days in advance. After that a police mountain entry
+						permit must be applied for. This can be done at the police station in Wuling Farm on the
+						spot.</p>
+					<br>
+					<p>There are two cabins on the trail. The first, Qika Cabin, is at the 2.0 kilometres (1.2 mi)
+						mark. The second, 369 Cabin, is at the 6.9 kilometres (4.3 mi) mark. Both cabins are very
+						basic containing bunker style beds. Hikers must bring their own sleeping and cooking gear.
+					</p>
+					<br>
+					<p>The peak is at the 10.9 kilometres (6.8 mi) mark.</p>
+				</div>
+				<div calss="tab5" data-tab-content="tab5">
+					<table class="tab_item">
+						<tr>
+							<td>
+								<p>County</p>
+							</td>
+							<td>
+								<p>Taian Township, Miaoli County ; Taichung City Heping District</p>
+							</td>
+							<td>
+								<p>Country</p>
+							</td>
+							<td>
+								<p>Taiwan</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>National Park</p>
+							</td>
+							<td>
+								<p>Shei-Pa National Park</p>
+							</td>
+							<td>
+								<p>Mountain Range</p>
+							</td>
+							<td>
+								<p>Mount Sylvia</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>Number</p>
+							</td>
+							<td>
+								<p>No. 2</p>
+							</td>
+							<td>
+								<p>Elevation</p>
+							</td>
+							<td>
+								<p>3,886 meters</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>Application Into The Mountains</p>
+							</td>
+							<td>
+								<p>Yes</p>
+							</td>
+							<td>
+								<p>Application For Admission To The Park</p>
+							</td>
+							<td>
+								<p>Yes</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>Related Trails</p>
+							</td>
+							<td colspan="3">
+								<p>Snow Sword Line St.</p>
+								<p>Holy Ridge I Type Vertical Walk (I St.)</p>
+								<p>Snow Mountain Under Green Lake</p>
+								<p>Snow Mountain West Edge Line St.</p>
+								<p>Holy Ridge O Type Vertical Walk (O St.)</p>
+								<p>Holy Ridge Y Type Vertical Walk (Y St.)</p>
+								<p>Snow Mountain Main East Peak Trail</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p>Base Point</p>
+							</td>
+							<td colspan="3">
+								<p>First-class triangle</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- table end -->
+	
+	<!-- Rounded switch
+	<div class="spring">
+		<label class="daySwitch switch">
+			<p>Day</p>
+			<input id="dayToggle" type="checkbox">
+			<div class="slider round"></div>
+		</label>
+
+		<label class="colorSwitch switch">
+			<p>Summer</p>
+			<input id="colorToggle" type="checkbox">
+			<div class="slider round"></div>
+		</label>
+	</div> -->
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="ft-container">
+			<div class="ft-item">
+				<h3>Developer Survey Story</h3>
+				<br>
+				<p>No matter how hard, keep enthusiastic.</p>
+				<p>Move forward.</p>
+			</div>
+			<div class="ft-item">
+				<h3>Direct</h3>
+				<a href="Index.html">
+					<p>Home</p>
+				</a>
+				<a href="Trip.html">
+					<p>Trip</p>
+				</a>
+				<a href="Mt.Introduction.html">
+					<p>Mt.Introduction</p>
+				</a>
+				<a href="Knowledge.html">
+					<p>Knowledge</p>
+				</a>
+				<a href="Information.html">
+					<p>Information</p>
+				</a>
+				<a href="Team.html">
+					<p>Team</p>
+				</a>
+			</div>
+			<div class="ft-item">
+				<h3>Visit Office</h3>
+				<br />
+				<iframe class="map11"src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d909.9115438784161!2d120.64431444645567!3d24.1841386502399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469163d0eac6cb5%3A0x53aa38e5c94812b3!2sNo.%2052%2C%20Fuxing%20North%20Road%2C%20Xitun%20District%2C%20Taichung%20City%2C%20407!5e0!3m2!1sen!2stw!4v1578211672699!5m2!1sen!2stw" width="300" height="200" frameborder="0" style="border-radius:6px;" allowfullscreen=""></iframe>
+				<br>
+				<p><i class="fa fa-map-pin" aria-hidden="true"></i> Address: No. 52, Fuxing North Road, Xitun District,
+					Taichung 407
+				</p>
+				<br>
+				<p>
+					<a href="" class="btn text-white" style="color: white;"><i class="fa fa-phone fa-lg"
+							style="color: white;" aria-hidden="true"></i>: 04 3704 6626</a>
+				</p>
+				<br>
+				<p>
+					<a href="https://www.facebook.com/DevelopIndiaOnline/" class="btn"><i class="fa fa-facebook fa-lg"
+							style="color: white;" aria-hidden="true"></i></a>
+					<a href="https://www.instagram.com/developindiaonline/" class="btn"><i class="fa fa-instagram fa-lg"
+							style="color: white;" aria-hidden="true"></i></a>
+					<a href="mailto:developindiaonline@gmail.com" class="btn "><i class="fa fa-envelope fa-lg"
+							style="color: white;" aria-hidden="true"></i></a>
+				</p>
+				<br>
+				<p>&copy; Beyond the mountains. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
+
+
+	
+</body>
+</html>

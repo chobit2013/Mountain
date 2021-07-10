@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Gallery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link rel="stylesheet" href="./css/Gallery.css">
+	<link href="https://fonts.googleapis.com/css?family=Gupter|Noto+Sans+TC|Noto+Serif+TC&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+	<!-- nav -->
+	<div class="nav" id="mynav">
+		<div class="logo">
+			<a href="index.html">
+				<img src="./image/logo.png" alt="logo" />
+			</a>
+		</div>
+		<ul class="menu-list">
+			<li><a href="Trip.html">Trip</a></li>
+			<li><a href="Mt.Introduction.html">Mt.Introduction</a></li>
+			<li><a href="Knowledge.html">Knowledge</a></li>
+			<li><a href="Information.html">Information</a></li>
+			<li><a href="Team.html">Team</a></li>
+		</ul>
+		<div class="menu">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+		</div>
+	</div>
+	<script>
+		const navSlide = () => {
+			const menu = document.querySelector('.menu');
+			const nav = document.querySelector('.menu-list');
+			const menuList = document.querySelectorAll('.menu-list li');
+			menu.addEventListener('click', () => {
+				nav.classList.toggle('nav-active');
+				menuList.forEach((link, index) => {
+					if (link.style.animation) {
+						link.style.animation = '';
+					}
+					else {
+						link.style.animation = `navReveal 0.5s ease forwards ${index / 7 + 0.5}s`;
+					}
+				});
+				menu.classList.toggle('toggle');
+			});
+		}
+		navSlide();
+		$(function () {
+			var header = $("#mynav");
+			$(window).scroll(function () {
+				var scroll = $(window).scrollTop();
+
+				if (scroll >= 200) {
+					header.removeClass('nav').addClass('nav2');
+				}
+				else {
+					header.removeClass('nav2').addClass('nav');
+				}
+			});
+		});
+	</script>
+	<!-- nav end-->
+
+	<!-- head major -->
+	<header class="major_blcok">
+		<header class="major">
+			<p>When I start moving my legs.</p>
+		</header>
+	</header>
+	<!-- head major end-->
+
+
+	<!-- google fonts-->
+
+	<div class="wrapper">
+		<div class="wrapper_inner">
+			<!-- Gallery -->
+			<section class="gallery">
+				<!-- Gallery  item section -->
+				<div class="gallery_item_section1">
+
+
+					<!-- Gallery  item -->
+					<div class="gallery_item">
+						<!-- Gallery  item preview -->
+						<span class="gallery_item_preview">
+							<a href="#" data-js="1">
+
+								<svg fill="#f55" class="gallery_top" viewbox="0 3 60 20">
+									<path
+										d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z">
+									</path>
+								</svg>
+
+								<img src="./image/ga1.jpg" alt="" /><span>
+									<h3>photo</h3>
+									<p>Let's go and start the adventure.</p>
+
+								</span>
+							</a>
+
+						</span>
+						<!-- Gallery  item full -->
+						<div data-lk="1" class="gallery_item_full">
+							<div class="box">
+								<img src="./image/ga1.jpg" alt="" />
+								<h3>image</h3>
+								<p>Let's go and start the adventure</p>
+							</div>
+						</div>
+					</div>
+
+
+
+					<!-- Gallery  item -->
+					<div class="gallery_item">
+						<!-- Gallery  item preview -->
+						<span class="gallery_item_preview">
+							<a href="#" data-js="2">
+								<svg fill="#5690F7" class="gallery_top" viewbox="0 3 60 20">
+									<path
+										d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z">
+									</path>
+								</svg>
+								<img src="./image/ga-mv1.jpg" alt="" /><span>
+									<h3>Video</h3>
+									<p>Let's go and start the adventure.</p>
+
+								</span></a>
+						</span>
+						<!-- Gallery  item full -->
+						<div data-lk="2" class="gallery_item_full">
+							<div class="box">
+
+								<div class="video">
+									<iframe width="500" height="350" src="https://www.youtube.com/embed/xV6C4QX4CVU"
+										frameborder="0"
+										allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+										allowfullscreen></iframe>
+								</div>
+
+								<h3>Video</h3>
+								<p>Let's go and start the adventure.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Gallery  item -->
+					<div class="gallery_item">
+						<!-- Gallery  item preview -->
+						<span class="gallery_item_preview">
+							<a href="#" data-js="3">
+								<svg fill="#5690F7" class="gallery_top" viewbox="0 3 60 20">
+									<path
+										d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z">
+									</path>
+								</svg>
+								<img src="./image/ga-mv2.jpg" alt="" /><span>
+									<h3>Video</h3>
+									<p>Let's go and start the adventure.</p>
+
+								</span></a>
+						</span>
+						<!-- Gallery  item full -->
+						<div data-lk="3" class="gallery_item_full">
+							<div class="box">
+								<div class="video">
+									<iframe width="500" height="350" src="https://www.youtube.com/embed/MoUH_fpNMI8"
+										frameborder="0"
+										allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+										allowfullscreen></iframe>
+								</div>
+								<h3>Video</h3>
+								<p>Let's go and start the adventure.</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="gallery_item_section2">
+					<!-- Gallery  item -->
+					<div class="gallery_item">
+						<!-- Gallery  item preview -->
+						<span class="gallery_item_preview">
+							<a href="#" data-js="4">
+								<svg fill="#f55" class="gallery_top" viewbox="0 3 60 20">
+									<path
+										d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z">
+									</path>
+								</svg>
+								<img src="https://25.media.tumblr.com/72ff371588fd911cf7725394740c62a0/tumblr_n2k15mq4xy1st5lhmo1_1280.jpg"
+									alt="" /><span>
+									<h3>Photo</h3>
+									<p>Let's go and start the adventure.</p>
+
+								</span></a>
+						</span>
+						<!-- Gallery  item full -->
+						<div data-lk="4" class="gallery_item_full">
+							<div class="box">
+								<img src="https://25.media.tumblr.com/72ff371588fd911cf7725394740c62a0/tumblr_n2k15mq4xy1st5lhmo1_1280.jpg"
+									alt="" />
+								<h3>Image</h3>
+								<p>Let's go and start the adventure.</p>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- Gallery  item -->
+					<div class="gallery_item">
+						<!-- Gallery  item preview -->
+						<span class="gallery_item_preview">
+							<a href="#" data-js="5">
+								<svg fill="#f55" class="gallery_top" viewbox="0 3 60 20">
+									<path
+										d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z">
+									</path>
+								</svg>
+								<img src="./image/ga2.jpg" alt="" /><span>
+									<h3>Photo</h3>
+									<p>Let's go and start the adventure.</p>
+
+								</span></a>
+
+						</span>
+						<!-- Gallery  item full -->
+						<div data-lk="5" class="gallery_item_full">
+							<div class="box">
+								<img src="./image/ga2.jpg" alt="" />
+								<h3>Image</h3>
+								<p>Let's go and start the adventure.</p>
+							</div>
+						</div>
+					</div>
+
+
+
+					<!-- Gallery  item -->
+					<div class="gallery_item">
+						<!-- Gallery  item preview -->
+						<span class="gallery_item_preview">
+							<a href="#" data-js="6">
+								<svg fill="#f55" class="gallery_top" viewbox="0 3 60 20">
+									<path
+										d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z">
+									</path>
+								</svg>
+								<img src="./image/ga3.jpg" alt="" /><span>
+									<h3>Photo</h3>
+									<p>Let's go and start the adventure.</p>
+
+								</span></a>
+						</span>
+						<!-- Gallery  item full -->
+						<div data-lk="6" class="gallery_item_full">
+							<div class="box">
+								<img src="./image/ga3.jpg" alt="" />
+								<h3>Image</h3>
+								<p>Let's go and start the adventure.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="gallery_item_section3">
+					<!-- Gallery  item -->
+					<div class="gallery_item">
+						<!-- Gallery  item preview -->
+						<span class="gallery_item_preview">
+							<a href="#" data-js="7">
+								<svg fill="#f55" class="gallery_top" viewbox="0 3 60 20">
+									<path
+										d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z">
+									</path>
+								</svg>
+								<img src="./image/ga4.jpg" alt="" /><span>
+									<h3>Photo</h3>
+									<p>Let's go and start the adventure.</p>
+
+								</span></a>
+						</span>
+						<!-- Gallery  item full -->
+						<div data-lk="7" class="gallery_item_full">
+							<div class="box">
+								<img src="./image/ga4.jpg" alt="" />
+								<h3>Image</h3>
+								<p>Let's go and start the adventure.</p>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- Gallery  item -->
+					<div class="gallery_item">
+						<!-- Gallery  item preview -->
+						<span class="gallery_item_preview">
+							<a href="#" data-js="8">
+								<svg fill="#f55" class="gallery_top" viewbox="0 3 60 20">
+									<path
+										d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z">
+									</path>
+								</svg>
+								<img src="./image/ga5.jpg" alt="" /><span>
+									<h3>Photo</h3>
+									<p>Let's go and start the adventure.</p>
+
+								</span></a>
+						</span>
+						<!-- Gallery  item full -->
+						<div data-lk="8" class="gallery_item_full">
+							<div class="box">
+								<img src="./image/ga5.jpg" alt="" />
+								<h3>Image</h3>
+								<p>Let's go and start the adventure.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Gallery  item -->
+					<div class="gallery_item">
+						<!-- Gallery  item preview -->
+						<span class="gallery_item_preview">
+							<a href="#" data-js="9">
+								<svg fill="#f55" class="gallery_top" viewbox="0 3 60 20">
+									<path d="M 0.65359477,1.3817905 175.81699,28.832771 176.47059,0.72819569 z"></path>
+								</svg>
+								<img src="./image/ga6.jpg" alt="" /><span>
+									<h3>Photo</h3>
+									<p>Let's go and start the adventure.</p>
+
+								</span></a>
+
+						</span>
+						<!-- Gallery  item full -->
+						<div data-lk="9" class="gallery_item_full">
+							<div class="box">
+								<img src="./image/ga6.jpg" alt="" />
+								<h3>Image</h3>
+								<p>Let's go and start the adventure.</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="gallery_item_section4">
+					<!-- Gallery  item -->
+					<div class="gallery_item">
+						<!-- Gallery  item preview -->
+						<span class="gallery_item_preview">
+							<a href="#" data-js="10">
+								<svg fill="#f55" class="gallery_top" viewbox="0 3 60 20">
+									<path
+										d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z">
+									</path>
+								</svg>
+								<img src="./image/ga7.jpg" alt="" /><span>
+									<h3>Photo</h3>
+									<p>Let's go and start the adventure.</p>
+
+								</span></a>
+						</span>
+						<!-- Gallery  item full -->
+						<div data-lk="10" class="gallery_item_full">
+							<div class="box">
+								<img src="./image/ga7.jpg" alt="" />
+								<h3>Image</h3>
+								<p>Let's go and start the adventure.</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Gallery  item -->
+					<div class="gallery_item">
+						<!-- Gallery  item preview -->
+						<span class="gallery_item_preview">
+							<a href="#" data-js="11">
+								<svg fill="#f55" class="gallery_top" viewbox="0 3 60 20">
+									<path
+										d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z">
+									</path>
+								</svg>
+								<img src="./image/ga8.jpg" alt="" /><span>
+									<h3>Photo</h3>
+									<p>Let's go and start the adventure.</p>
+
+								</span></a>
+						</span>
+						<!-- Gallery  item full -->
+						<div data-lk="11" class="gallery_item_full">
+							<div class="box">
+								<img src="./image/ga8.jpg" alt="" />
+								<h3>Image</h3>
+								<p>Let's go and start the adventure.</p>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- Gallery  item -->
+					<div class="gallery_item">
+						<!-- Gallery  item preview -->
+						<span class="gallery_item_preview">
+							<a href="#" data-js="12">
+								<svg fill="#f55" class="gallery_top" viewbox="0 3 60 20">
+									<path
+										d="M 0.65359477,1.3817905 C 60.201925,8.44316 121.92863,11.583451 175.81699,28.832771 l 0.6536,-28.10457531 z">
+									</path>
+								</svg>
+								<img src="./image/ga9.jpg" alt="" />
+								<span>
+									<h3>Photo</h3>
+								</span>
+								<p>Let's go and start the adventure.</p>
+							</a>
+						</span>
+						<!-- Gallery  item full -->
+						<div data-lk="12" class="gallery_item_full">
+							<div class="box">
+								<img src="./image/ga9.jpg" alt="" />
+								<h3>Image</h3>
+								<p>Let's go and start the adventure.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<script>
+		var gallery = (function () {
+
+			'use strict';
+
+			// vars
+			var gal_item = $('.gallery_item'),
+				gal_img = $('.gallery_item_preview a img'),
+				gal_full = $('.gallery_item_full'),
+				gal_box = $('.box'),
+				gal_top = $('.gallery_top');
+
+
+			return {
+				// this.js(obj)
+				js: function (e) { return $("[data-js=" + e + "]"); },
+				// this.lk(obj)
+				lk: function (e) { return $("[data-lk=" + e + "]"); },
+				// Ready functions
+				ready_: function () { this.events(); },
+				//  functions
+				events: function () {
+					var self = this;
+					// add close link
+					gal_full.append('<a href="#" data-js="cl" class="cl">X</a>');
+					// Get all data js and add clickOn function
+					var k = $('a[data-js]');
+					k.each(function (i, v) {
+						i = i + 1;
+						self.clickOn(i);
+					});
+					// close on click
+					self.js('cl').on("click", function (e) {
+						e.preventDefault();
+						self.fx_out(gal_full);
+						self.fx_out(gal_box);
+					});
+
+					// list style
+					self.js('list').on("click", function (e) {
+						e.preventDefault();
+						// toggle class
+						gal_item.toggleClass('gallery_item_list');
+						gal_img.toggleClass('gallery_line');
+
+						// change icon style
+						if (gal_item.hasClass('gallery_item_list')) {
+							$(this).addClass('icon_list_open')
+								.html('<span>•••</span>' +
+									'<span>•••</span>' +
+									'<span>•••</span>');
+							gal_top.attr("class", "gallery_top gallery_hide_top");
+						} else {
+							$(this).removeClass('icon_list_open')
+								.html('<span>• -</span>' +
+									'<span>• -</span>' +
+									'<span>• -</span>');
+							gal_top.attr("class", "gallery_top");
+						}
+					});
+				},
+				// Show on click
+				clickOn: function (i) {
+					var self = this;
+					this.js(i).on('click', function (e) {
+						e.preventDefault();
+						self.fx_in(self.lk(i));
+						self.fx_in(gal_box);
+					});
+				},
+				// out function
+				fx_out: function (el) {
+					el.addClass('efOut')
+						.delay(500)
+						.fadeOut('fast')
+						.removeClass('efIn');
+					// show scroll
+					$('body').css({ overflow: 'auto' });
+					return false;
+				},
+				// in function
+				fx_in: function (el) {
+					el.removeClass('efOut')
+						.show(200)
+						.addClass('efIn');
+					// hide scroll
+					$('body').css({ overflow: 'hidden' });
+					return false;
+				}
+			};
+		})();
+		// ready function of gallery
+		gallery.ready_();
+
+	</script>
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="ft-container">
+			<div class="ft-item">
+				<h3>Developer Survey Story</h3>
+				<br>
+				<p>No matter how hard, keep enthusiastic.</p>
+				<p>Move forward.</p>
+			</div>
+			<div class="ft-item">
+				<h3>Direct</h3>
+				<a href="Index.html">
+					<p>Home</p>
+				</a>
+				<a href="Trip.html">
+					<p>Trip</p>
+				</a>
+				<a href="Mt.Introduction.html">
+					<p>Mt.Introduction</p>
+				</a>
+				<a href="Knowledge.html">
+					<p>Knowledge</p>
+				</a>
+				<a href="Information.html">
+					<p>Information</p>
+				</a>
+				<a href="Team.html">
+					<p>Team</p>
+				</a>
+			</div>
+			<div class="ft-item">
+				<h3>Visit Office</h3>
+				<br />
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d909.9115438784161!2d120.64431444645567!3d24.1841386502399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469163d0eac6cb5%3A0x53aa38e5c94812b3!2sNo.%2052%2C%20Fuxing%20North%20Road%2C%20Xitun%20District%2C%20Taichung%20City%2C%20407!5e0!3m2!1sen!2stw!4v1578211672699!5m2!1sen!2stw"
+					width="300" height="200" frameborder="0" style="border-radius:6px;" allowfullscreen=""></iframe>
+				<br>
+				<p><i class="fa fa-map-pin" aria-hidden="true"></i> Address: No. 52, Fuxing North Road, Xitun District,
+					Taichung 407
+				</p>
+				<br>
+				<p>
+					<a href="" class="btn text-white" style="color: white;"><i class="fa fa-phone fa-lg"
+							style="color: white;" aria-hidden="true"></i>: 04 3704 6626</a>
+				</p>
+				<br>
+				<p>
+					<a href="https://www.facebook.com/DevelopIndiaOnline/" class="btn"><i class="fa fa-facebook fa-lg"
+							style="color: white;" aria-hidden="true"></i></a>
+					<a href="https://www.instagram.com/developindiaonline/" class="btn"><i class="fa fa-instagram fa-lg"
+							style="color: white;" aria-hidden="true"></i></a>
+					<a href="mailto:developindiaonline@gmail.com" class="btn "><i class="fa fa-envelope fa-lg"
+							style="color: white;" aria-hidden="true"></i></a>
+				</p>
+				<br>
+				<p>&copy; Beyond the mountains. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Knowledge</title>
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/Knowledge.css">
+	<link href="https://fonts.googleapis.com/css?family=Gupter|Noto+Sans+TC|Noto+Serif+TC&display=swap"
+		rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="./css/all.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<!-- nav -->
+	<div class="nav" id="mynav">
+		<div class="logo">
+			<a href="index.html">
+				<img src="./image/logo.png" alt="logo" />
+			</a>
+		</div>
+
+		<ul class="menu-list">
+			<li><a href="Trip.html">Trip</a></li>
+			<li><a href="Mt.Introduction.html">Mt.Introduction</a></li>
+			<li><a href="Knowledge.html">Knowledge</a></li>
+			<li><a href="Information.html">Information</a></li>
+			<li><a href="Team.html">Team</a></li>
+		</ul>
+
+		<div class="menu">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+		</div>
+
+	</div>
+	<script>
+		const navSlide = () => {
+			const menu = document.querySelector('.menu');
+			const nav = document.querySelector('.menu-list');
+			const menuList = document.querySelectorAll('.menu-list li');
+
+			menu.addEventListener('click', () => {
+				nav.classList.toggle('nav-active');
+
+				menuList.forEach((link, index) => {
+					if (link.style.animation) {
+						link.style.animation = '';
+					}
+					else {
+						link.style.animation = `navReveal 0.5s ease forwards ${index / 7 + 0.5}s`;
+					}
+				});
+				menu.classList.toggle('toggle');
+			});
+		}
+
+		navSlide();
+
+		$(function () {
+			var header = $("#mynav");
+			$(window).scroll(function () {
+				var scroll = $(window).scrollTop();
+
+				if (scroll >= 200) {
+					header.removeClass('nav').addClass('nav2');
+				}
+				else {
+					header.removeClass('nav2').addClass('nav');
+				}
+			});
+		});
+	</script>
+
+	<!-- nav end-->
+
+	<!-- header.major -->
+	<header class="major_blcok">
+		<header class="major">
+			<p>Only by being prepared in advance can you go longer.</p>
+		</header>
+	</header>
+	<!-- header.major end-->
+
+	<!-- item_list -->
+	<div class="knoledge">
+		<div class="item_list">
+
+			<div class="item">
+				<a href="">
+					<div class="item_list1">
+						<div class="icon"><i class="far fa-lightbulb fa-3x"></i>
+						</div>
+						<div class="text">
+							<h4>Basic Knowledge</h4>
+							<p></p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="item">
+				<a href="">
+					<div class="item_list2">
+						<div class="icon"><i class="fas fa-mountain fa-3x"></i></div>
+						<div class="text">
+							<h4>Climbing Equipment</h4>
+							<p></p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="item">
+				<a href="">
+					<div class="item_list3">
+						<div class="icon"><i class="fas fa-route fa-3x"></i></div>
+						<div class="text">
+							<h4>Climbing Safety</h4>
+							<p></p>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<div class="item_list">
+			<div class="item">
+				<a href="">
+					<div class="item_list4">
+						<div class="icon"><i class="fas fa-hiking fa-3x"></i></div>
+						<div class="text">
+							<h4>Climbing Skills</h4>
+							<p></p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="item">
+				<a href="">
+					<div class="item_list5">
+						<div class="icon"><i class="fas fa-first-aid fa-3x"></i></div>
+						<div class="text">
+							<h4>Medicine For Mountaineering</h4>
+							<p></p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="item">
+				<a href="">
+					<div class="item_list6">
+						<div class="icon"><i class="fas fa-feather-alt fa-3x"></i></div>
+						<div class="text">
+							<h4>Ecological Knowledge</h4>
+							<p></p>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+
+			<div class="item_list">
+				<div class="item">
+				<a href="">
+					<div class="item_list7">
+						<div class="icon"><i class="fas fa-campground fa-3x"></i></div>
+						<div class="text">
+							<h4>Camping Knowledge</h4>
+							<p></p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="item">
+				<a href="">
+					<div class="item_list8">
+						<div class="icon"><i class="fas fa-wind fa-3x"></i></div>
+						<div class="text">
+							<h4>Weather Adaptability</h4>
+							<p></p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="item">
+				<a href="">
+					<div class="item_list9">
+						<div class="icon"><i class="fas fa-info fa-3x"></i></div>
+						<div class="text">
+							<h4>Precautions</h4>
+							<p></p>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		<!-- item_list end-->
+
+		<!-- galler -->
+		<div class="container">
+			<div class="wrap">
+				<div class="gallery">
+					<figure class="gallery__item gallery__item--1">
+						<a href="#img1">
+							<img src="./image/mt_yu2 - gallery.jpg" alt="01" class="gallery__img">
+						</a>
+						<div class="lightbox" id="img1">
+							<img src="./image/mt_yu2 - gallery.jpg" alt="">
+							<a href="#_" class="btn-close">&times;</a>
+						</div>
+					</figure>
+
+					<figure class="gallery__item gallery__item--2">
+						<a href="#img2">
+							<img src="./image/mt_sm - gallery.jpg" alt="02" class="gallery__img">
+						</a>
+						<div class="lightbox" id="img2">
+							<img src="./image/mt_sm - gallery.jpg" alt="">
+							<a href="#_" class="btn-close">&times;</a>
+						</div>
+					</figure>
+
+					<figure class="gallery__item gallery__item--3">
+						<a href="#img3">
+							<img src="./image/at_mt_db - gallery.jpg" alt="03" class="gallery__img">
+						</a>
+						<div class="lightbox" id="img3">
+							<img src="./image/at_mt_db - gallery.jpg" alt="">
+							<a href="#_" class="btn-close">&times;</a>
+						</div>
+					</figure>
+
+					<figure class="gallery__item gallery__item--4">
+						<a href="#img4">
+							<img src="./image/Chilenan-gallery.jpg" alt="04" class="gallery__img">
+						</a>
+						<div class="lightbox" id="img4">
+							<img src="./image/Chilenan-gallery.jpg" alt="">
+							<a href="#_" class="btn-close">&times;</a>
+						</div>
+					</figure>
+
+					<figure class="gallery__item gallery__item--5">
+						<a href="#img5">
+							<img src="./image/Daxue Mountain-gallery.jpg" alt="05" class="gallery__img">
+						</a>
+						<div class="lightbox" id="img5">
+							<img src="./image/Daxue Mountain-gallery.jpg" alt="">
+							<a href="#_" class="btn-close">&times;</a>
+						</div>
+					</figure>
+
+					<figure class="gallery__item gallery__item--6">
+						<a href="#img6">
+							<img src="./image/plt_ub - gallery.jpg" alt="06" class="gallery__img">
+						</a>
+						<div class="lightbox" id="img6">
+							<img src="./image/plt_ub - gallery.jpg" alt="">
+							<a href="#_" class="btn-close">&times;</a>
+						</div>
+					</figure>
+
+				</div>
+			</div>
+		</div>
+		<!-- galler end-->
+
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="ft-container">
+				<div class="ft-item">
+					<h3>Developer Survey Story</h3>
+					<br>
+					<p>No matter how hard, keep enthusiastic.</p>
+					<p>Move forward.</p>
+				</div>
+				<div class="ft-item">
+					<h3>Direct</h3>
+					<a href="Index.html">
+						<p>Home</p>
+					</a>
+					<a href="Trip.html">
+						<p>Trip</p>
+					</a>
+					<a href="Mt.Introduction.html">
+						<p>Mt.Introduction</p>
+					</a>
+					<a href="Knowledge.html">
+						<p>Knowledge</p>
+					</a>
+					<a href="Information.html">
+						<p>Information</p>
+					</a>
+					<a href="Team.html">
+						<p>Team</p>
+					</a>
+					</div>
+				<div class="ft-item">
+					<h3>Visit Office</h3>
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d909.9115438784161!2d120.64431444645567!3d24.1841386502399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469163d0eac6cb5%3A0x53aa38e5c94812b3!2sNo.%2052%2C%20Fuxing%20North%20Road%2C%20Xitun%20District%2C%20Taichung%20City%2C%20407!5e0!3m2!1sen!2stw!4v1578211672699!5m2!1sen!2stw"
+						width="300" height="200" frameborder="0" style="border-radius:6px;" allowfullscreen=""></iframe>
+					<br>
+					<p><i class="fa fa-map-pin" aria-hidden="true"></i> Address: No. 52, Fuxing North Road, Xitun
+						District,
+						Taichung 407
+					</p>
+					<br>
+					<p>
+						<a href="" class="btn text-white" style="color: white;"><i class="fa fa-phone fa-lg"
+								style="color: white;" aria-hidden="true"></i>: 04 3704 6626</a>
+					</p>
+					<br>
+					<p>
+						<a href="https://www.facebook.com/DevelopIndiaOnline/" class="btn"><i
+								class="fa fa-facebook fa-lg" style="color: white;" aria-hidden="true"></i></a>
+						<a href="https://www.instagram.com/developindiaonline/" class="btn"><i
+								class="fa fa-instagram fa-lg" style="color: white;" aria-hidden="true"></i></a>
+						<a href="mailto:developindiaonline@gmail.com" class="btn "><i class="fa fa-envelope fa-lg"
+								style="color: white;" aria-hidden="true"></i></a>
+					</p>
+					<br>
+					<p>&copy; Beyond the mountains. All rights reserved.</p>
+				</div>
+			</div>
+		</footer>
+
+</body>
+
+</html>

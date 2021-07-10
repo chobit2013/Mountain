@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Information</title>
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/Infornmation.css">
+	<link href="https://fonts.googleapis.com/css?family=Gupter|Noto+Sans+TC|Noto+Serif+TC&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		.swiper-button-prev,
+		.swiper-button-next {
+			color: white;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="nav" id="mynav">
+		<div class="logo">
+			<a href="Index.html">
+				<img src="./image/logo.png" alt="logo">
+			</a>
+		</div>
+		<ul class="menu-list">
+			<li><a href="Trip.html">Trip</a></li>
+			<li><a href="Mt.Introduction.html">Mt.Introduction</a></li>
+			<li><a href="Knowledge.html">Knowledge</a></li>
+			<li><a href="Information.html">Information</a></li>
+			<li><a href="Team.html">Team</a></li>
+		</ul>
+		<div class="menu">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+		</div>
+	</div>
+	<script>
+		const navSlide = () => {
+			const menu = document.querySelector('.menu');
+			const nav = document.querySelector('.menu-list');
+			const menuList = document.querySelectorAll('.menu-list li');
+
+			menu.addEventListener('click', () => {
+				nav.classList.toggle('nav-active');
+				menuList.forEach((link, index) => {
+					if (link.style.animation) {
+						link.style.animation = '';
+					}
+					else {
+						link.style.animation = `navReveal 0.5s ease forwards ${index / 7 + 0.5}s`;
+					}
+				});
+				menu.classList.toggle('toggle');
+			});
+		}
+
+		navSlide();
+		$(function () {
+			var header = $("#mynav");
+			$(window).scroll(function () {
+				var scroll = $(window).scrollTop();
+				if (scroll >= 200) {
+					header.removeClass('nav').addClass('nav2');
+				}
+				else {
+					header.removeClass('nav2').addClass('nav');
+				}
+			});
+		});
+	</script>
+	<!-- nav end -->
+
+	<!-- Carousel -->
+	<!-- Slider main container -->
+	<div class="swiper-container">
+		<!-- Additional required wrapper -->
+		<div class="swiper-wrapper">
+			<!-- Slides -->
+			<div class="swiper-slide">
+				<img src="./image/info-ga-1.jpg" alt="" style="width: 100%;"></div>
+			<div class="swiper-slide">
+				<img src="./image/info-ga-2.jpg" alt="" style="width: 100%;"></div>
+			<div class="swiper-slide">
+				<img src="./image/info-ga-3.jpg" alt="" style="width: 100%;"></div>
+			<div class="swiper-slide">
+				<img src="./image/info-ga-4.jpg" alt="" style="width: 100%;"></div>
+			<div class="swiper-slide">
+				<img src="./image/info-ga-5.jpg" alt="" style="width: 100%;"></div>
+		</div>
+		<!-- If we need pagination -->
+		<div class="swiper-pagination"></div>
+
+		<!-- If we need navigation buttons -->
+		<div class="swiper-button-prev"></div>
+		<div class="swiper-button-next"></div>
+
+		<!-- If we need scrollbar -->
+		<!-- <div class="swiper-scrollbar"></div> -->
+	</div>
+	<!-- Carousel end-->
+
+	<!-- card -->
+	<div class="card_list">
+		<div class="card">
+			<div class="front">
+				<div class="content">
+					<div class="image">
+						<img src="./image/info-1.jpg" alt="">
+					</div>
+					<div class="title">
+						Survey
+						<div class="author">Ahern</div>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="content">
+					<a href="https://leica-geosystems.com/products/uav-systems" target="block">
+						<div class="title">
+							Look for
+						</div>
+						<div class="sub-title">
+							The Lecia UAV is designed with the latest technology and functionality.
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="card">
+			<div class="front">
+				<div class="content">
+					<div class="image">
+						<img src="./image/info-2.jpg" alt="">
+					</div>
+					<div class="title">
+						Plum flower
+						<div class="author">Blake</div>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="content">
+					<a href="https://hiking.biji.co/index.php?q=news&act=info&id=16141" target="block">
+						<div class="title">
+							Look for
+						</div>
+						<div class="sub-title">
+							Chingjing farm recently blossomed plum.
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="front">
+				<div class="content">
+					<div class="image">
+						<img src="./image/info-3.jpg" alt="">
+					</div>
+					<div class="title">
+						Hiking shoes
+						<div class="author">Christian</div>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="content">
+					<a href="http://www.merrell.com.tw/" target="block">
+						<div class="title">
+							Look for
+						</div>
+						<div class="sub-title">
+							Waterproofing membrane was developed by its own Italian original and patented SPO-TEX
+							LINING.
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="card_list">
+		<div class="card">
+			<div class="front">
+				<div class="content">
+					<div class="image">
+						<img src="./image/info-4.jpg" alt="">
+					</div>
+					<div class="title">
+						Mountaineering Backpack
+						<div class="author">Ellis</div>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="content">
+					<a href="https://www.amazon.com/s?k=osprey+atmos+ag+50&adgrpid=83223846204&gclid=Cj0KCQiAjfvwBRCkARIsAIqSWlNG2TqLONaylOPpVj5DiELdExm-ZdUI3LlT3Ui8KDJF2MyZapAyJ94aAhcvEALw_wcB&hvadid=402245656202&hvdev=c&hvlocphy=21102&hvnetw=g&hvpos=1t1&hvqmt=b&hvrand=3649120794778081980&hvtargid=kwd-350425627567&hydadcr=22340_11226439&tag=hydglogoo-20&ref=pd_sl_8j25rk1y1r_b"
+						target="block">
+						<div class="title">
+							Look for
+						</div>
+						<div class="sub-title">
+							Tatonka is a German outdoor backpack brand. The main consideration is high-quality materials
+							and technology and functionality.
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="card">
+			<div class="front">
+				<div class="content">
+					<div class="image">
+						<img src="./image/info-5.jpg" alt="">
+					</div>
+					<div class="title">
+						Nature
+						<div class="author">Dennis</div>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="content">
+					<a href="https://forestinvasives.ca/Intro-to-Invasives/Impacts-of-Invasive-Species/The-Natural-Forest"
+						target="block">
+						<div class="title">
+							Look for
+						</div>
+						<div class="sub-title">
+							The so-called maple red usually refers to green maple or palm maple.
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="front">
+				<div class="content">
+					<div class="image">
+						<img src="./image/info-6.jpg" alt="">
+					</div>
+					<div class="title">
+						Map
+						<div class="author">Uriah</div>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="content">
+					<a href="https://www.garmin.com.tw/mobile/" target="block">
+						<div class="title">
+							Look for
+						</div>
+						<div class="sub-title">
+							Mobile navigation APP: Hikingbook actual operation.
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- card1 end -->
+	<!-- card2 -->
+	<div class="card_list">
+		<div class="card">
+			<div class="front">
+				<div class="content">
+					<div class="image">
+						<img src="./image/info-7.jpg" alt="">
+					</div>
+					<div class="title">
+						Skill
+						<div class="author">Valentine</div>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="content">
+					<a href="https://hiking.biji.co/index.php?q=review&act=info&review_id=8390" target="block">
+						<div class="title">
+							Look for
+						</div>
+						<div class="sub-title">
+							How to make sure you are on the right path and feel how your muscles are working.
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="card">
+			<div class="front">
+				<div class="content">
+					<div class="image">
+						<img src="./image/info-8.jpg" alt="">
+					</div>
+					<div class="title">
+						Path
+						<div class="author">Zebulon</div>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="content">
+					<a href="https://hiking.biji.co/index.php?q=review&act=info&review_id=9484" target="block">
+						<div class="title">
+							Look for
+						</div>
+						<div class="sub-title">
+							Cat Lao Mountain Climbing Step located by the beautiful Sun Moon Lake in Nantou Fish Pond.
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="card">
+			<div class="front">
+				<div class="content">
+					<div class="image">
+						<img src="./image/info-9.jpg" alt="">
+					</div>
+					<div class="title">
+						Enjoy
+						<div class="author">Sophie</div>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div class="content">
+					<a href="https://www.ysnp.gov.tw/" target="block">
+						<div class="title">
+							Look for
+						</div>
+						<div class="sub-title">
+							National Park Yewang Film Festival-Yushan show starts on September 13.
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="ft-container">
+			<div class="ft-item">
+				<h3>Developer Survey Story</h3>
+				<br>
+				<p>No matter how hard, keep enthusiastic.</p>
+				<p>Move forward.</p>
+			</div>
+			<div class="ft-item">
+				<h3>Direct</h3>
+				<a href="Index.html">
+					<p>Home</p>
+				</a>
+				<a href="Trip.html">
+					<p>Trip</p>
+				</a>
+				<a href="Mt.Introduction.html">
+					<p>Mt.Introduction</p>
+				</a>
+				<a href="Knowledge.html">
+					<p>Knowledge</p>
+				</a>
+				<a href="Information.html">
+					<p>Information</p>
+				</a>
+				<a href="Team.html">
+					<p>Team</p>
+				</a>
+			</div>
+			<div class="ft-item">
+				<h3>Visit Office</h3>
+				<br>
+				<br>
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d909.9115438784161!2d120.64431444645567!3d24.1841386502399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469163d0eac6cb5%3A0x53aa38e5c94812b3!2sNo.%2052%2C%20Fuxing%20North%20Road%2C%20Xitun%20District%2C%20Taichung%20City%2C%20407!5e0!3m2!1sen!2stw!4v1578211672699!5m2!1sen!2stw"
+					width="300" height="200" frameborder="0" style="border-radius:6px;" allowfullscreen=""></iframe>
+				<br>
+				<p><i class="fa fa-map-pin" aria-hidden="true"></i> Address: No. 52, Fuxing North Road, Xitun District,
+					Taichung 407
+				</p>
+				<br>
+				<p>
+					<a href="" class="btn text-white" style="color: white;"><i class="fa fa-phone fa-lg"
+							style="color: white;" aria-hidden="true"></i>: 04 3704 6626</a>
+				</p>
+				<br>
+				<p>
+					<a href="https://www.facebook.com/DevelopIndiaOnline/" class="btn"><i class="fa fa-facebook fa-lg"
+							style="color: white;" aria-hidden="true"></i></a>
+					<a href="https://www.instagram.com/developindiaonline/" class="btn"><i class="fa fa-instagram fa-lg"
+							style="color: white;" aria-hidden="true"></i></a>
+					<a href="mailto:developindiaonline@gmail.com" class="btn "><i class="fa fa-envelope fa-lg"
+							style="color: white;" aria-hidden="true"></i></a>
+				</p>
+				<br>
+				<p>&copy; Beyond the mountains. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer end-->
+
+	<!-- swiper -->
+	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+	<script src="./js/swiper1.js"></script>
+	<!-- swiper end-->
+</body>
+
+</html>

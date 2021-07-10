@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Mt.Introduction</title>
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./css/Mt.Introduction.css">
+	<link href="https://fonts.googleapis.com/css?family=Gupter|Noto+Sans+TC|Noto+Serif+TC&display=swap"
+		rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link href="css/slider-pro.min.css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.sliderPro.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+</head>
+
+<body>
+	<!-- nav -->
+	<div class="nav" id="mynav">
+		<div class="logo">
+			<a href="index.html">
+				<img src="./image/logo.png" alt="logo" />
+			</a>
+		</div>
+		<ul class="menu-list">
+			<li><a href="Trip.html">Trip</a></li>
+			<li><a href="Mt.Introduction.html">Mt.Introduction</a></li>
+			<li><a href="Knowledge.html">Knowledge</a></li>
+			<li><a href="Information.html">Information</a></li>
+			<li><a href="Team.html">Team</a></li>
+		</ul>
+		<div class="menu">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+		</div>
+	</div>
+	<script>
+		const navSlide = () => {
+			const menu = document.querySelector('.menu');
+			const nav = document.querySelector('.menu-list');
+			const menuList = document.querySelectorAll('.menu-list li');
+			menu.addEventListener('click', () => {
+				nav.classList.toggle('nav-active');
+				menuList.forEach((link, index) => {
+					if (link.style.animation) {
+						link.style.animation = '';
+					}
+					else {
+						link.style.animation = `navReveal 0.5s ease forwards ${index / 7 + 0.5}s`;
+					}
+				});
+				menu.classList.toggle('toggle');
+			});
+		}
+		navSlide();
+		$(function () {
+			var header = $("#mynav");
+			$(window).scroll(function () {
+				var scroll = $(window).scrollTop();
+
+				if (scroll >= 200) {
+					header.removeClass('nav').addClass('nav2');
+				}
+				else {
+					header.removeClass('nav2').addClass('nav');
+				}
+			});
+		});
+	</script>
+	<!-- nav end-->
+
+	<!-- head major -->
+	<header class="major_blcok">
+		<header class="major">
+			<p>The small things in our lives, the trivial troubles that seem so important to us, all disappear
+				in front of the mountain. - Asahel Curtis.</p>
+			<img src="./image/background-img-1.jpg" alt="">
+			</header>
+	</header>
+	<!-- head major end-->
+
+	<!-- section grid -->
+	<section class="grid">
+		<h2>Mountains Information</h2>
+		<div class="grid_card">
+			<div class="card">
+				<a href="Mt.Introduction-1.html"><img src="./image/Yushan Main Peak.jpg" />
+					<h3>Yushan Main Peak</h3>
+					<p>Elevation 3,952 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href="Mt.Introduction-1.html"><img src="./image/Snow Mountain Main Peak.jpg" />
+					<h3>Xueshan Main Peak</h3>
+					<p>Elevation 3,886 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Xiuguluan Mountain.jpg" />
+					<h3>Xiuguluan Mountain</h3>
+					<p>Elevation 3,805 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Nanhu Dashan.jpg" />
+					<h3>Nanhu Das Mountain</h3>
+					<p>Elevation 3,742 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Beida Wushan.jpg" />
+					<h3>Beida Wus Mountain</h3>
+					<p>Elevation 3,092 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Central Jianshan.jpg" />
+					<h3>Central Jian Mountain</h3>
+					<p>Elevation 3,705 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Da Ba Jian Shan.jpg" />
+					<h3>Dabajian Mountain</h3>
+					<p>Elevation 3,492 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Dafin.jpg" />
+					<h3>Dafin Mountain</h3>
+					<p>Elevation 3,208 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Chile north.jpg" />
+					<h3>Chile North Peak</h3>
+					<p>Elevation 3,607 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Pintian shan.jpg" />
+					<h3>Pintian Mountain</h3>
+					<p>Elevation 3,524 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Chi Youshan.jpg" />
+					<h3>Chiyou Mountain</h3>
+					<p>Elevation 3,303 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Taoshan.jpg" />
+					<h3>Tao Mountain</h3>
+					<p>Elevation 3,325 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Karaye Mountain.jpg" />
+					<h3>Karaye Mountain</h3>
+					<p>Elevation 3,133 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Yushan Dongfeng.jpg" />
+					<h3>Yushan Eest Peak</h3>
+					<p>Elevation 3,869 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Yushan Nanfeng.jpg" />
+					<h3>Yushan South peak </h3>
+					<p>Elevation 3,844 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Maboras.jpg" />
+					<h3>Maboras Mountain</h3>
+					<p>Elevation 3,785 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Guanshan.jpg" />
+					<h3>Guan Mountain</h3>
+					<p>Elevation 3,668 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Dajian Mountainjpg.jpg" />
+					<h3>Dajian Mountain</h3>
+					<p>Elevation 3,594 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Pintian shan1.jpg" />
+					<h3>Pintian Mountain</h3>
+					<p>Elevation 3,524 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Wumingshan.jpg" />
+					<h3>Wuming Mountain</h3>
+					<p>Elevation 3,451 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Can high south peak.jpg" />
+					<h3>Nenggao Mountain South Peak</h3>
+					<p>Elevation 3,349 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Xinkang shan.jpg" />
+					<h3>Xinkang Mountain</h3>
+					<p>Elevation 3,331 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/North Peak of Yushan.jpeg" />
+					<h3>Yushan North Peak</h3>
+					<p>Elevation 3,858 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Xiangyang Mountain.jpg" />
+					<h3>Xiangyang Mountain</h3>
+					<p>Elevation 3,602 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Dongluan Mountain.jpg" />
+					<h3>Dongluan Mountain</h3>
+					<p>Elevation 3,468 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Zhijiayang Mountain.jpg" />
+					<h3>Zhijiayang Mountain</h3>
+					<p>Elevation 3,345 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Guanshan.jpg" />
+					<h3>Guan Mountain</h3>
+					<p>Elevation 3,668 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Lingmingshan.jpg" />
+					<h3>Lingming Mountain</h3>
+					<p>Elevation 3,272 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Shan.jpg" />
+					<h3>Latch Mountain</h3>
+					<p>Elevation 3,168 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Nanhu Beishan.jpg" />
+					<h3>Nanhu Bei Mountain</h3>
+					<p>Elevation 3,536 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Daxue Mountain.jpg" />
+					<h3>Daxue Mountain</h3>
+					<p>Elevation 3,530 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Three Forks.jpg" />
+					<h3>Three Forks Mountain</h3>
+					<p>Elevation 3,496 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Ogun-gun.jpg" />
+					<h3>Ogun Gun Mountain</h3>
+					<p>Elevation 3,619 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Massy Mountain.jpg" />
+					<h3>Massy Mountain</h3>
+					<p>Elevation 3,443 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/North Hehuan Mountain.jpg" />
+					<h3>North Hehuan Mountain</h3>
+					<p>Elevation 3,422 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Chilenan pk.jpg" />
+					<h3>Chile Montain South Peak</h3>
+					<p>Elevation 3,358 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Mount Beinan.jpg" />
+					<h3>Beinan Montain</h3>
+					<p>Elevation 3,293 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Taroko Mountains.jpg" />
+					<h3>Taroko Mountain</h3>
+					<p>Elevation 3,283 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Neiling er.jpg" />
+					<h3>Neiling Mountain</h3>
+					<p>Elevation 3,275 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Snow Mountain Main East Peak.jpg" />
+					<h3>Snow Mountain East Peak</h3>
+					<p>Elevation 3,201 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/North Hehuan Mountain.jpg" />
+					<h3>Hehuan Mountain North Peak</h3>
+					<p>Elevation 3,422 meters</p>
+				</a>
+			</div>
+			<div class="card">
+				<a href=""><img src="./image/Taguan shan.jpg" />
+					<h3>Taguan Mountain</h3>
+					<p>Elevation 3,222 meters</p>
+				</a>
+			</div>
+		</div>
+	</section>
+	<!-- section grid end-->
+
+	<!-- Carousel -->
+	<div class="htmleaf-container">
+		<h2>Enjoy life</h2>
+		<div id="example5" class="slider-pro">
+			<div class="sp-slides">
+				<div class="sp-slide">
+					<img data-src="./image/Beida Wushan.jpg" data-retina="./image/Beida Wushan.jpg" />
+
+					<div class="sp-caption">Full of green breath in Beida Wushan.</div>
+				</div>
+
+				<div class="sp-slide">
+					<img data-src="./image/mt_chili.jpg" data-retina="./image/mt_chili.jpg" />
+
+					<div class="sp-caption">How small I am, on top of mt_chili.</div>
+				</div>
+
+				<div class="sp-slide">
+					<img data-src="./image/Daba north.jpg" data-retina="./image/Daba north.jpg" />
+
+					<div class="sp-caption">How magnificent.</div>
+				</div>
+
+				<div class="sp-slide">
+					<img data-src="./image/Yushan Qunfeng Line.jpg" data-retina="./image/Yushan Qunfeng Line.jpg" />
+
+					<div class="sp-caption">Great road, here we come.</div>
+				</div>
+
+				<div class="sp-slide">
+					<img data-src="./image/Maboras.jpg" data-retina="./image/Maboras.jpg" />
+
+					<div class="sp-caption">Enjoy the silence.</div>
+				</div>
+
+				<div class="sp-slide">
+					<img data-src="./image/view1.jpg" data-retina="./image/view1.jpg" />
+
+					<div class="sp-caption">Watching the vast sea of clouds alone.</div>
+				</div>
+
+				<div class="sp-slide">
+					<img data-src="./image/mt_hh.jpg" data-retina="./image/mt_hh.jpg" />
+
+					<div class="sp-caption">The coniferous forest on Hehuan Mountain is so beautiful.</div>
+				</div>
+
+				<div class="sp-slide">
+					<img data-src="./image/Hidden Peak Peak Trail in Yushan.jpg"
+						data-retina="./image/Hidden Peak Peak Trail in Yushan.jpg" />
+
+					<div class="sp-caption">This is a hidden route in Yushan.</div>
+				</div>
+
+				<div class="sp-slide">
+					<img data-src="./image/mt_dp.jpg" data-retina="./image/mt_dp.jpg" />
+
+					<div class="sp-caption">Rice brown forest is amazing.</div>
+				</div>
+
+				<div class="sp-slide">
+					<img data-src="./image/mt_chili3.jpg" data-retina="./image/mt_chili3.jpg" />
+
+					<div class="sp-caption">Climbers most want to conquer Mount Black Chilai.</div>
+				</div>
+			</div>
+
+			<div class="sp-thumbnails">
+				<div class="sp-thumbnail">
+					<div class="sp-thumbnail-image-container">
+						<img class="sp-thumbnail-image" src="./image/Beida Wushan-1.jpg" />
+					</div>
+					<div class="sp-thumbnail-text">
+						<div class="sp-thumbnail-title"></div>
+						<div class="sp-thumbnail-description"></div>
+					</div>
+				</div>
+
+				<div class="sp-thumbnail">
+					<div class="sp-thumbnail-image-container">
+						<img class="sp-thumbnail-image" src="./image/mt_chili-1.jpg" />
+					</div>
+					<div class="sp-thumbnail-text">
+						<div class="sp-thumbnail-title"></div>
+						<div class="sp-thumbnail-description"></div>
+					</div>
+				</div>
+
+				<div class="sp-thumbnail">
+					<div class="sp-thumbnail-image-container">
+						<img class="sp-thumbnail-image" src="./image/Daba north-1.jpg" />
+					</div>
+					<div class="sp-thumbnail-text">
+						<div class="sp-thumbnail-title"></div>
+						<div class="sp-thumbnail-description"></div>
+					</div>
+				</div>
+
+				<div class="sp-thumbnail">
+					<div class="sp-thumbnail-image-container">
+						<img class="sp-thumbnail-image" src="./image/Yushan Qunfeng Line-1.jpg" />
+					</div>
+					<div class="sp-thumbnail-text">
+						<div class="sp-thumbnail-title"></div>
+						<div class="sp-thumbnail-description"></div>
+					</div>
+				</div>
+
+				<div class="sp-thumbnail">
+					<div class="sp-thumbnail-image-container">
+						<img class="sp-thumbnail-image" src="./image/Maboras-1.jpg" />
+					</div>
+					<div class="sp-thumbnail-text">
+						<div class="sp-thumbnail-title"></div>
+						<div class="sp-thumbnail-description"></div>
+					</div>
+				</div>
+
+				<div class="sp-thumbnail">
+					<div class="sp-thumbnail-image-container">
+						<img class="sp-thumbnail-image" src="./image/view1-1.jpg" />
+					</div>
+					<div class="sp-thumbnail-text">
+						<div class="sp-thumbnail-title"></div>
+						<div class="sp-thumbnail-description"></div>
+					</div>
+				</div>
+
+				<div class="sp-thumbnail">
+					<div class="sp-thumbnail-image-container">
+						<img class="sp-thumbnail-image" src="./image/mt_hh-1.jpg" />
+					</div>
+					<div class="sp-thumbnail-text">
+						<div class="sp-thumbnail-title"></div>
+						<div class="sp-thumbnail-description"></div>
+					</div>
+				</div>
+
+				<div class="sp-thumbnail">
+					<div class="sp-thumbnail-image-container">
+						<img class="sp-thumbnail-image" src="./image/Hidden Peak Peak Trail in Yushan-1.jpg" />
+					</div>
+					<div class="sp-thumbnail-text">
+						<div class="sp-thumbnail-title"></div>
+						<div class="sp-thumbnail-description"></div>
+					</div>
+				</div>
+
+				<div class="sp-thumbnail">
+					<div class="sp-thumbnail-image-container">
+						<img class="sp-thumbnail-image" src="./image/mt_dp-1.jpg" />
+					</div>
+					<div class="sp-thumbnail-text">
+						<div class="sp-thumbnail-title"></div>
+						<div class="sp-thumbnail-description"></div>
+					</div>
+				</div>
+
+				<div class="sp-thumbnail">
+					<div class="sp-thumbnail-image-container">
+						<img class="sp-thumbnail-image" src="./image/mt_chili3-1.jpg" />
+					</div>
+					<div class="sp-thumbnail-text">
+						<div class="sp-thumbnail-title"></div>
+						<div class="sp-thumbnail-description"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function ($) {
+			$('#example5').sliderPro({
+				width: 670,
+				height: 500,
+				orientation: 'vertical',
+				loop: false,
+				arrows: true,
+				buttons: false,
+				thumbnailsPosition: 'right',
+				thumbnailPointer: true,
+				thumbnailWidth: 290,
+				breakpoints: {
+					800: {
+						thumbnailsPosition: 'bottom',
+						thumbnailWidth: 270,
+						thumbnailHeight: 100
+					},
+					500: {
+						thumbnailsPosition: 'bottom',
+						thumbnailWidth: 120,
+						thumbnailHeight: 50
+					}
+				}
+			});
+		});
+	</script>
+	<!-- Carousel-end -->
+
+	<!-- map -->
+	<div class="map">
+	</div>
+	<!-- map end-->
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="ft-container">
+			<div class="ft-item">
+				<h3>Developer Survey Story</h3>
+				<br>
+				<p>No matter how hard, keep enthusiastic.</p>
+				<p>Move forward.</p>
+			</div>
+			<div class="ft-item">
+				<h3>Direct</h3>
+				<a href="Index.html">
+					<p>Home</p>
+				</a>
+				<a href="Trip.html">
+					<p>Trip</p>
+				</a>
+				<a href="Mt.Introduction.html">
+					<p>Mt.Introduction</p>
+				</a>
+				<a href="Knowledge.html">
+					<p>Knowledge</p>
+				</a>
+				<a href="Information.html">
+					<p>Information</p>
+				</a>
+				<a href="Team.html">
+					<p>Team</p>
+				</a>
+			</div>
+			<div class="ft-item">
+				<h3>Visit Office</h3>
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d909.9115438784161!2d120.64431444645567!3d24.1841386502399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469163d0eac6cb5%3A0x53aa38e5c94812b3!2sNo.%2052%2C%20Fuxing%20North%20Road%2C%20Xitun%20District%2C%20Taichung%20City%2C%20407!5e0!3m2!1sen!2stw!4v1578211672699!5m2!1sen!2stw"
+					width="300" height="200" frameborder="0" style="border-radius:6px;" allowfullscreen=""></iframe>
+				<br>
+				<p><i class="fa fa-map-pin" aria-hidden="true"></i> Address: No. 52, Fuxing North Road, Xitun District,
+					Taichung 407
+				</p>
+				<br>
+				<p>
+					<a href="" class="btn text-white" style="color: white;"><i class="fa fa-phone fa-lg"
+							style="color: white;" aria-hidden="true"></i>: 04 3704 6626</a>
+				</p>
+				<br>
+				<p>
+					<a href="https://www.facebook.com/DevelopIndiaOnline/" class="btn"><i class="fa fa-facebook fa-lg"
+							style="color: white;" aria-hidden="true"></i></a>
+					<a href="https://www.instagram.com/developindiaonline/" class="btn"><i class="fa fa-instagram fa-lg"
+							style="color: white;" aria-hidden="true"></i></a>
+					<a href="mailto:developindiaonline@gmail.com" class="btn "><i class="fa fa-envelope fa-lg"
+							style="color: white;" aria-hidden="true"></i></a>
+				</p>
+				<br>
+				<p>&copy; Beyond the mountains. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
+
+
+</body>
+</html>

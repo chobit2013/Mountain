@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Trip</title>
+	<link rel="stylesheet" type="text/css" href="./css/reset.css">
+	<link href="https://fonts.googleapis.com/css?family=Gupter|Noto+Sans+TC|Noto+Serif+TC&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/Trip.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<!-- nav -->
+	<div class="nav" id="mynav">
+		<div class="logo">
+			<a href="index.html">
+				<img src="./image/logo.png" alt="logo" />
+			</a>
+		</div>
+		<ul class="menu-list">
+			<li><a href="Trip.html">Trip</a></li>
+			<li><a href="Mt.Introduction.html">Mt.Introduction</a></li>
+			<li><a href="Knowledge.html">Knowledge</a></li>
+			<li><a href="Information.html">Information</a></li>
+			<li><a href="Team.html">Team</a></li>
+		</ul>
+		<div class="menu">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+		</div>
+	</div>
+	<script>
+		const navSlide = () => {
+			const menu = document.querySelector('.menu');
+			const nav = document.querySelector('.menu-list');
+			const menuList = document.querySelectorAll('.menu-list li');
+			menu.addEventListener('click', () => {
+				nav.classList.toggle('nav-active');
+				menuList.forEach((link, index) => {
+					if (link.style.animation) {
+						link.style.animation = '';
+					}
+					else {
+						link.style.animation = `navReveal 0.5s ease forwards ${index / 7 + 0.5}s`;
+					}
+				});
+				menu.classList.toggle('toggle');
+			});
+		}
+
+		navSlide();
+		$(function () {
+			var header = $("#mynav");
+			$(window).scroll(function () {
+				var scroll = $(window).scrollTop();
+				if (scroll >= 200) {
+					header.removeClass('nav').addClass('nav2');
+				}
+				else {
+					header.removeClass('nav2').addClass('nav');
+				}
+			});
+		});
+	</script>
+	<!-- nav end-->
+
+	
+	<header class="major_blcok">
+		<header class="major">
+			<p>We do not conquer the mountains, but ourselves. - Edmund Hillary</p>
+		</header>
+	</header>
+	
+	<div class="text">
+	<h2>Choose your journey and touch your original mood.</h2>
+	</div>
+	<!-- jQuery dynamic column grid layout -->
+	<div class="htmleaf-container">
+		<!-- <header class="htmleaf-header">
+			<div class="htmleaf-demo center">
+			</div>
+			<br>
+		</header> -->
+
+		<ol id="filters">
+			<li data-filter="all">All Mountains</li>
+			<!-- <li data-filter="amsterdam">Amsterdam</li> -->
+			<li data-filter="Northern Taiwan">Northern Taiwan</li>
+			<li data-filter="Central Taiwan">Central Taiwan</li>
+			<!-- <li data-filter="paris">Paris</li> -->
+			<li data-filter="Southern Taiwan">Southern Taiwan</li>
+			<!-- <li data-filter="sport">Sport</li> -->
+			<li data-filter="Short trip">Short Trip</li>
+			<li data-filter="Intermediate trip">Intermediate Trip</li>
+			<li data-filter="Long trip">Long Trip</li>
+		</ol>
+		<br />
+
+		<div role="main">
+			<ul id="container" class="tiles-wrap animated">
+				<li data-filter-class='["Northern Taiwan", "Intermediate trip"]'>
+					<a href="Introduction_road.html"><img src="./image/snow_main_perk.jpg"
+							height="200" width="190">
+						<p>Snow Mountain Main Peak Trail</p>
+						<span>Miaoli County</span>
+					</a>
+
+				</li>
+				<li data-filter-class='["Northern Taiwan", "Intermediate trip"]'>
+					<a href=""><img src="./image/Momoyama Hiking Trail.jpg" height="250" width="190">
+						<p>Momoyama Hiking Trail</p>
+						<span>Hsinchu County</span>
+					</a>
+				</li>
+				<li data-filter-class='["Northern Taiwan", "Intermediate trip"]'>
+					<a href=""><img src="image/Daba Qunfeng Mountain Trail.jpg" height="200" width="190">
+						<p>Daba Qunfeng Mountain Trail</p>
+						<span>Hsinchu County</span>
+					</a>
+				</li>
+				<li data-filter-class='["Northern Taiwan", "Intermediate trip"]'>
+					<a href=""><img src="image/Wuling four beautiful hiking trail.jpg" height="220" width="190">
+						<p>Wuling Four Beautiful Hiking Trail</p>
+						<span>Hsinchu County</span>
+					</a>
+
+				</li>
+				<li data-filter-class='["Northern Taiwan", "Intermediate trip"]'>
+					<a href=""><img src="image/Snow Mountain emerald pool.jpg" height="250" width="190">
+						<p>Snow Mountain Emerald Pool</p>
+						<span>Miaoli County</span>
+					</a>
+				</li>
+
+				<li data-filter-class='["Northern Taiwan", "Long trip"]'>
+					<a href=""><img src="image/Daba north ridge.jpg" height="210" width="190">
+						<p>Daba North Ridge</p>
+						<span>Hsinchu County</span>
+					</a>
+				</li>
+				<li data-filter-class='["Northern Taiwan", "Long trip"]'>
+					<a href=""><img src="image/Holy ridge O-shaped vertical walking1.jpg" height="250" width="190">
+						<p>Holy Ridge O-shaped Vertical Walking</p>
+						<span>Hsinchu County</span>
+					</a>
+				</li>
+				<li data-filter-class='["Northern Taiwan", "Long trip"]'>
+					<a href=""><img src="image/Holy ridge I type Vertical Walk.jpg" height="230" width="190">
+						<p>Holy ridge I type Vertical Walk</p>
+						<span>Hsinchu County</span>
+					</a>
+				</li>
+				<li data-filter-class='["Northern Taiwan", "Long trip"]'>
+					<a href=""><img src="image/Snow Mountain West Ridge.jpg" height="200" width="190">
+						<p>Snow Mountain West Ridge</p>
+						<span>Hsinchu County</span>
+					</a>
+				</li>
+
+				<li data-filter-class='["Central Taiwan", "Short trip"]'>
+					<a href=""><img src="./image/Hehuan Shimenshan Trail.jpg" height="200" width="190">
+						<p>Hehuan Shimenshan Trail</p>
+						<span>Nantou County</span>
+					</a>
+				</li>
+				<li data-filter-class='["Central Taiwan", "Short trip"]'>
+					<a href=""></a><img src="./image/Hehuan Main Peak Trail.jpg" height="200" width="190">
+					<p>Hehuan Main Peak Trail</p>
+					<span>Nantou County</span></a>
+				</li>
+				<li data-filter-class='["Central Taiwan", "Intermediate trip"]'>
+					<a href=""><img src="image/Yushan Main Peak.jpg" height="250" width="190">
+						<p>Yushan Main Peak Trail</p>
+						<span>Nantou County</span>
+					</a>
+				</li>
+				<li data-filter-class='["Central Taiwan", "Intermediate trip"]'>
+					<a href=""><img src="image/Snow Mountain Main East Peak Trail.jpg" height="158" width="190">
+						<p>Snow Mountain Main East Peak Trail</p>
+						<span>Taichung County</span>
+					</a>
+				</li>
+				<li data-filter-class='["Central Taiwan", "Intermediate trip"]'>
+					<a href=""><img src="./image/Chilanan Peak Trail.jpg" height="252" width="190">
+						<p>Chilanan Peak Trail</p>
+						<span>Nantou County</span>
+					</a>
+				</li>
+				<li data-filter-class='["Central Taiwan", "Intermediate trip"]'>
+					<a href=""><img src="./image/Hehuan Xifeng Trail.jpg" height="240" width="190">
+						<p>Hehuan Xifeng Trail</p>
+						<span>Nantou County</span>
+					</a>
+				</li>
+				<li data-filter-class='["Central Taiwan", "Long trip"]'>
+					<a href=""><img src="image/Yushan Qunfeng Line.jpg" height="200" width="190">
+						<p>Yushan Qunfeng Line</p>
+						<span>Nantou County</span>
+					</a>
+				</li>
+				<li data-filter-class='["Central Taiwan", "Long trip"]'>
+					<a href=""><img src="image/Maboras Cross Section.jpg" height="250" width="190">
+						<p>Maboras Cross Section</p>
+						<span>Nantou County</span>
+					</a>
+				</li>
+
+
+				<li data-filter-class='["Southern Taiwan", "Intermediate trip"]'>
+					<a href=""><img src="image/Yushan Main Peak.jpg" height="250" width="190">
+						<p>Yushan Main Peak Trail</p>
+						<span>Nantou County</span>
+					</a>
+				</li>
+				<li data-filter-class='["Southern Taiwan", "Intermediate trip"]'>
+					<a href=""><img src="image/spanNantou Countyspan.jpeg" height="210" width="190">
+						<p>Yushan Xifeng Trailt</p>
+						<span>Nantou County</span>
+					</a>
+				</li>
+				<li data-filter-class='["Southern Taiwan", "Intermediate trip"]'>
+					<a href=""><img src="image/Beida Wushan Trail.jpg" height="230" width="190">
+						<p>Beida Wushan Trail</p>
+						<span>Taitung County</span>
+					</a>
+				</li>
+				<li data-filter-class='["Southern Taiwan", "Long trip"]'>
+					<a href=""><img src="image/South Second Section.jpg" height="220" width="190">
+						<p>South Second Section</p>
+						<span>Kaohsiung County</span>
+					</a>
+				</li>
+				<li data-filter-class='["Southern Taiwan", "Long trip"]'>
+					<a href=""><img src="image/Hidden Peak Peak Trail in Yushan.jpg" height="230" width="190">
+						<p>Hidden Peak Peak Trail in Yushan</p>
+						<span>Chiayi County</span>
+					</a>
+				</li>
+				<li data-filter-class='["Southern Taiwan", "Long trip"]'>
+					<img href=""><img href=""><img src="image/South One Section.jpg" height="267" width="190">
+					<p>South One Section</p>
+					<span>Kaohsiung County</span></a>
+				<li data-filter-class='["Southern Taiwan", "Long trip"]'>
+					<a href=""><img src="image/Holy ridge I type Vertical Walk.jpg" height="200" width="190">
+						<p>Holy ridge I type</p>
+						<span>Chiayi County</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- include jQuery -->
+		<script src="js/jquery-1.11.0.min.js"></script>
+		<!-- Include the imagesLoaded plug-in -->
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+
+		<!-- Include the plug-in -->
+		<script src="js/wookmark.js"></script>
+
+		<!-- Once the page is loaded, initalize the plug-in. -->
+		<script type="text/javascript">
+			(function ($) {
+				// Instantiate wookmark after all images have been loaded
+				var wookmark;
+				imagesLoaded('#container', function () {
+					wookmark = new Wookmark('#container', {
+						fillEmptySpace: true // Optional, fill the bottom of each column with widths of flexible height
+					});
+				});
+
+				// Setup filter buttons when jQuery is available
+				var $filters = $('#filters li');
+
+				/**
+				 * When a filter is clicked, toggle it's active state and refresh.
+				 */
+				function onClickFilter(e) {
+					var $item = $(e.currentTarget),
+						activeFilters = [],
+						filterType = $item.data('filter');
+					if (filterType === 'all') {
+						$filters.removeClass('active');
+					} else {
+						$item.toggleClass('active');
+						// Collect active filter strings
+						$filters.filter('.active').each(function () {
+							activeFilters.push($(this).data('filter'));
+						});
+					}
+					wookmark.filter(activeFilters, 'and');
+				}
+				// Capture filter click events.
+				$('#filters').on('click.wookmark-filter', 'li', onClickFilter);
+			})(jQuery);
+		</script>
+		<!-- jQuery dynamic column grid layout end -->
+	</div>
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="ft-container">
+			<div class="ft-item">
+				<h3>Developer Survey Story</h3>
+				<br>
+				<p>No matter how hard, keep enthusiastic.</p>
+				<p>Move forward.</p>
+			</div>
+			<div class="ft-item">
+				<h3>Direct</h3>
+				<a href="Index.html">
+					<p>Home</p>
+				</a>
+				<a href="Trip.html">
+					<p>Trip</p>
+				</a>
+				<a href="Mt.Introduction.html">
+					<p>Mt.Introduction</p>
+				</a>
+				<a href="Knowledge.html">
+					<p>Knowledge</p>
+				</a>
+				<a href="Information.html">
+					<p>Information</p>
+				</a>
+				<a href="Team.html">
+					<p>Team</p>
+				</a>
+			</div>
+			<div class="ft-item">
+				<h3>Visit Office</h3>
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d909.9115438784161!2d120.64431444645567!3d24.1841386502399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469163d0eac6cb5%3A0x53aa38e5c94812b3!2sNo.%2052%2C%20Fuxing%20North%20Road%2C%20Xitun%20District%2C%20Taichung%20City%2C%20407!5e0!3m2!1sen!2stw!4v1578211672699!5m2!1sen!2stw"
+					width="300" height="200" frameborder="0" style="border-radius:6px;" allowfullscreen=""></iframe>
+				<br>
+				<p><i class="fa fa-map-pin" aria-hidden="true"></i> Address: No. 52, Fuxing North Road, Xitun District,
+					Taichung 407
+				</p>
+				<br>
+				<p>
+					<a href="" class="btn text-white" style="color: white;"><i class="fa fa-phone fa-lg"
+							style="color: white;" aria-hidden="true"></i>: 04 3704 6626</a>
+				</p>
+				<br>
+				<p>
+					<a href="https://www.facebook.com/DevelopIndiaOnline/" class="btn"><i class="fa fa-facebook fa-lg"
+							style="color: white;" aria-hidden="true"></i></a>
+					<a href="https://www.instagram.com/developindiaonline/" class="btn"><i class="fa fa-instagram fa-lg"
+							style="color: white;" aria-hidden="true"></i></a>
+					<a href="mailto:developindiaonline@gmail.com" class="btn "><i class="fa fa-envelope fa-lg"
+							style="color: white;" aria-hidden="true"></i></a>
+				</p>
+				<br>
+				<p>&copy; Beyond the mountains. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
+
+
+</body>
+</html>
